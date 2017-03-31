@@ -21,20 +21,27 @@ domains:
   new:      "https://aldev.ro/al_test"
 
 # (required) The paths to capture. All paths should exist for both of the domains specified above.
+# (required) The paths to capture. This particular config is using casperjs, so we can take screenshots of selectors rather than the entire page.
 paths:
   home:
-    path: /
-    selector: "body"
+    path: '/'
+    selector: 'body'
   about:
-    path: /about-me
-    selector: "body"
+    path: '/about-me'
+    selector: 'body'
+  gridable_article:
+    path: '/wordpress/introducing-gridable-the-missing-grid-content-editor'
+    selector: 'body'
+  second_article:
+    path: '/programming/automated-testing-what-can-they-bring/'
+    selector: 'body'
+  wordpress_category:
+    path: '/category/wordpress/'
+    selector: 'body'
   open_menu:
-    path: /
+    path: '/'
     selector: "body"
     before_capture: 'javascript/interactions/open--menu.js'
-  article:
-    path: /wordpress/introducing-gridable-the-missing-grid-content-editor
-    selector: 'body'
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
@@ -57,7 +64,7 @@ threshold: 5
 gallery:
   template: 'slideshow_template' # Examples: 'basic_template' (default), 'slideshow_template'
   thumb_width:  200
-  thumb_height: 200
+  thumb_height: 400
 
 # (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
 # Options:

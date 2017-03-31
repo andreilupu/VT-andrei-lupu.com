@@ -29,16 +29,19 @@ paths:
   about:
     path: '/about-me'
     selector: 'body'
-  article: 
+  gridable_article:
     path: '/wordpress/introducing-gridable-the-missing-grid-content-editor'
+    selector: 'body'
+  second_article:
+    path: '/programming/automated-testing-what-can-they-bring/'
+    selector: 'body'
+  wordpress_category:
+    path: '/category/wordpress/'
     selector: 'body'
   open_menu:
     path: '/'
     selector: "body"
     before_capture: 'javascript/interactions/open--menu.js'
-  phpinfo:
-    path: '/info.php'
-    selector: 'body'
 
   # clickable_guide:
   #   path: /news/entertainment-arts-27221191

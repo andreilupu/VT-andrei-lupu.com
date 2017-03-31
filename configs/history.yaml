@@ -24,16 +24,22 @@ domains:
 # (required) The paths to capture. This particular config is using casperjs, so we can take screenshots of selectors rather than the entire page.
 paths:
   home: 
-    path: /
+    path: '/'
     selector: 'body'
   about:
-    path: /about-me
+    path: '/about-me'
     selector: 'body'
-  article: 
-    path: /wordpress/introducing-gridable-the-missing-grid-content-editor
+  gridable_article:
+    path: '/wordpress/introducing-gridable-the-missing-grid-content-editor'
+    selector: 'body'
+  second_article:
+    path: '/programming/automated-testing-what-can-they-bring/'
+    selector: 'body'
+  wordpress_category:
+    path: '/category/wordpress/'
     selector: 'body'
   open_menu:
-    path: /
+    path: '/'
     selector: "body"
     before_capture: 'javascript/interactions/open--menu.js'
   phpinfo:
@@ -61,10 +67,10 @@ screen_widths:
 # resize_or_reload: 'resize'
 
 # (required for history mode, otherwise optional) The directory that your base screenshots will be stored in.
-history_dir: 'php_version_base'
+history_dir: 'al_base'
 
 # (required) The directory that your latest screenshots will be stored in
-directory: 'php_version_shots'
+directory: 'al_shots'
 
 # (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
 fuzz: '20%'
